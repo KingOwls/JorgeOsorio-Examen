@@ -1,22 +1,36 @@
-/* Defaul */
 *{
-    background-color: #3D3935;
+    margin: 0;
 }
-/* Body*/
-.body{
-    background-color: #3D3935;
+
+body{
+    font-family: "Madimi One", sans-serif;
+    background: #3D3935;
+    color: #FFFFFF;
+    padding: 2rem 1rem;
 }
+
 button{
     background-color:rgb(46, 154, 226);
     color:rgb(46, 154, 226);
 }
 h1{
     text-align: center;
+    color:rgb(46, 154, 226);
+}
+.text{
+    text-align: center;
+    color: white;
 }
 
 .Categorias{
+    display: grid;
     grid: 2;
 }
 .divison{
     grid-row: 4rem;
+}
+img{
+    width: 80%;
+    max-width: 200px;
+    height: auto;
 }
