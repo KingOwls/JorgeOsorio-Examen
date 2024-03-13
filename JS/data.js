@@ -10,36 +10,22 @@ Persona={
 class data {
     async loadData(endPoint){
         try {
-            const data = await fetch(`${this.URL_API}${this.mapKeys(endPoint)}`,{
+            const data = await fetch(`${this.JSON_API}${this.mapKeys(endPoint)}`,{
                 method: "GET",
                 headers: this.HEADERS
             }).then(data => data.json())
             return data
         } catch (error) {
-            return []
+            return {}
         }
-
     }
 
     async saveData(endPoint, object){
         try {
-            const data = await fetch(`${this.URL_API}${this.mapKeys(endPoint)}`,{
+            const data = await fetch(`${this.JSON_API}${this.mapKeys(endPoint)}`,{
                 method: "POST",
                 headers: this.HEADERS,
                 body: JSON.stringify(object)
-            })
-            return data
-        } catch (error) {
-            return {}
-        }
-
-    }
-
-    async deleteData(endPoint, id){
-        try {
-            const data = await fetch(`${this.URL_API}${this.mapKeys(endPoint)}/${id}`,{
-                method: "DELETE",
-                headers: this.HEADERS
             })
             return data
         } catch (error) {

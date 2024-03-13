@@ -3,9 +3,20 @@
     background-color: #3D3935;
 }
 /* Body*/
-body{
+.body{
     background-color: #3D3935;
 }
-h1{
+button{
+    background-color:rgb(46, 154, 226);
     color:rgb(46, 154, 226);
+}
+h1{
+    text-align: center;
+}
+
+.Categorias{
+    grid: 2;
+}
+.divison{
+    grid-row: 4rem;
 }
