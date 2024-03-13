@@ -8,5 +8,5 @@ Persona={
     "Costos": 0
 }
 class data {
-    
+
 }
