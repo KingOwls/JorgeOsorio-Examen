@@ -1,3 +1,12 @@
+JSON_URL ="http://154.38.171.54:3001/priceA"
+HEADERS={}
+
+Persona={
+    "Name": "",
+    "NumberPhone": "",
+    "email": "",
+    "Costos": 0
+}
 class data {
     async loadData(endPoint){
         try {
@@ -12,19 +21,6 @@ class data {
 
     }
 
-    async loadDataId(endPoint, id){
-        try {
-            const data = await fetch(`${this.URL_API}${this.mapKeys(endPoint)}/${id}`,{
-                method: "GET",
-                headers: this.HEADERS
-            }).then(data => data.json())
-            return data 
-        } catch (error) {
-            return {}
-        }
-
-    }
-
     async saveData(endPoint, object){
         try {
             const data = await fetch(`${this.URL_API}${this.mapKeys(endPoint)}`,{
@@ -32,21 +28,6 @@ class data {
                 headers: this.HEADERS,
                 body: JSON.stringify(object)
             })
-            return data
-        } catch (error) {
-            return {}
-        }
-
-    }
-
-    async updateData(endPoint, object){
-        try {
-            const data = await fetch(`${this.URL_API}${this.mapKeys(endPoint)}/${object.id}`,{
-                method: "PUT",
-                headers: this.HEADERS,
-                body: JSON.stringify(object)
-            })
-            console.log(data)
             return data
         } catch (error) {
             return {}
